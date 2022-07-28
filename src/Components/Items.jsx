@@ -51,6 +51,8 @@ const Items = () => {
 											{title}
 										</h5>
 
+										<h2>Brand : {brand}</h2>
+										<br />
 										<p className="text-gray-700 text-base mb-4">
 											{description}
 										</p>
@@ -67,7 +69,7 @@ const Items = () => {
 											type="button"
 											className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
 										>
-											<Link to={`/itemDetails/${id}`}>Button</Link>
+											<Link to={`/itemDetails/${id}`}>See More!</Link>
 										</button>
 									</div>
 								</div>
