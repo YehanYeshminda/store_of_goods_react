@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Items from './Components/Items';
+import Navbar from './Components/Navbar';
+import './index.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemDetails from './routes/ItemDetails';
+import NoMatch from './routes/NoMatch';
+import CatergoriesHeader from './Components/CatergoriesHeader';
+import Catergories from './routes/Catergories';
+import SearchBar from './Components/SearchBar';
+import SearchProducts from './routes/SearchProducts';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<BrowserRouter>
+				<Navbar />
+				<CatergoriesHeader />
+				<SearchBar />
+				<Routes>
+					<Route path="/" element={<Items />} />
+					<Route path="/itemDetails/:id" element={<ItemDetails />} />
+					<Route path="/products/:catergoryName" element={<Catergories />} />
+					<Route path="/searched/:searchName" element={<SearchProducts />} />
+					<Route path="*" element={<NoMatch />} />
+				</Routes>
+			</BrowserRouter>
+		</>
+	);
 }
 
 export default App;
