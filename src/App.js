@@ -8,6 +8,7 @@ import CatergoriesHeader from './Components/CatergoriesHeader';
 import Catergories from './routes/Catergories';
 import SearchBar from './Components/SearchBar';
 import SearchProducts from './routes/SearchProducts';
+import CarouselBar from './Components/Carousel';
 
 function App() {
 	return (
